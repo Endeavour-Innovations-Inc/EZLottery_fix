@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
-    width: '70%', // Adjust this value to fit your NFT image
+    width: '100%', // Adjust this value to fit your NFT image
     height: 'auto', // Adjust this value to fit your NFT image
     margin: 'auto', // Added this line to center align the paper
   },
@@ -97,6 +97,7 @@ function App() {
         <Paper className={classes.paper}>
           <Typography variant="h4">EZ Lottery</Typography>
             <img src={myImage1} alt="NFT Placeholder" style={{width: '200px', height: 'auto', border: '2px solid black'}} />
+          <Typography variant="h6">Price: 0.01 Matic</Typography>
           <Button
             className={classes.button}
             variant="contained"
