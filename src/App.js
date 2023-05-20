@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Web3 from 'web3';
 import EZLottery from "./EZLottery.json";
-import { Button, Paper, Typography, Box, AppBar, Toolbar, IconButton } from '@material-ui/core';
+import { Button, Paper, Typography, Box, AppBar, Toolbar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import './App.css';
 import myImage1 from './gambling.png';
@@ -74,8 +74,6 @@ function App() {
   const buttonLabel = account 
     ? `${account.slice(0, 6)}...${account.slice(-4)}`
     : 'Connect to MetaMask';
-
-  const buttonColor = account ? 'secondary' : 'primary';
 
   return (
     <div className={classes.root}>
