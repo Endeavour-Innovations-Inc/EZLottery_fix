@@ -18,14 +18,21 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
     backgroundColor: '#f5f5f5',
     backgroundImage: `url(${myImage2})`,
-    backgroundSize: 'cover'  // to cover the whole page with your image
+    backgroundSize: 'cover',
+    [theme.breakpoints.down('sm')]: {
+      height: 'auto',
+      padding: theme.spacing(2),
+    },
   },
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
-    width: '100%', // Adjust this value to fit your NFT image
-    height: 'auto', // Adjust this value to fit your NFT image
-    margin: 'auto', // Added this line to center align the paper
+    width: '100%',
+    height: 'auto',
+    margin: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
   button: {
     marginTop: theme.spacing(1),
@@ -33,6 +40,14 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  image: {
+    width: '200px', 
+    height: 'auto', 
+    border: '2px solid black',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
+  }
 }));
 
 function App() {
@@ -96,7 +111,7 @@ function App() {
       <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center" height="100vh">
         <Paper className={classes.paper}>
           <Typography variant="h4">EZ Lottery</Typography>
-            <img src={myImage1} alt="NFT Placeholder" style={{width: '200px', height: 'auto', border: '2px solid black'}} />
+            <img src={myImage1} alt="NFT Placeholder" className={classes.image} />
           <Typography variant="h6">Price: 0.01 Matic</Typography>
           <Button
             className={classes.button}
