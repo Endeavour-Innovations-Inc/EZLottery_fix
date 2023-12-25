@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Web3 from 'web3';
-import EZLottery from "./EZLottery.json";
+import EZLottery from "./Assets/EZLottery.json";
 import { Button, Paper, Typography, Box, AppBar, Toolbar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import './App.css';
-import myImage1 from './gambling.png';
-import myImage2 from './rolete.png';
+import './Style/App.css';
+import myImage1 from './Assets/gambling.png';
+import myImage2 from './Assets/rolete.png';
 
 let web3, contract;
 
@@ -25,11 +25,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(3),
     textAlign: 'center',
     width: '100%',
     height: 'auto',
-    margin: 'auto',
+    margin: '4%',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
     },
@@ -108,7 +108,33 @@ function App() {
           )}
         </Toolbar>
       </AppBar>
-      <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center" height="100vh">
+      <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center" height="100vh">
+        <Paper className={classes.paper}>
+          <Typography variant="h4">EZ Lottery</Typography>
+            <img src={myImage1} alt="NFT Placeholder" className={classes.image} />
+          <Typography variant="h6">Price: 0.01 Matic</Typography>
+          <Button
+            className={classes.button}
+            variant="contained"
+            color="primary"
+            onClick={mintTicket}
+          >
+            Mint Ticket
+          </Button>
+        </Paper>
+        <Paper className={classes.paper}>
+          <Typography variant="h4">EZ Lottery</Typography>
+            <img src={myImage1} alt="NFT Placeholder" className={classes.image} />
+          <Typography variant="h6">Price: 0.01 Matic</Typography>
+          <Button
+            className={classes.button}
+            variant="contained"
+            color="primary"
+            onClick={mintTicket}
+          >
+            Mint Ticket
+          </Button>
+        </Paper>
         <Paper className={classes.paper}>
           <Typography variant="h4">EZ Lottery</Typography>
             <img src={myImage1} alt="NFT Placeholder" className={classes.image} />
