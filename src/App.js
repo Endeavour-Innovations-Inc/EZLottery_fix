@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     height: 'auto',
     margin: '4%',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)', // White with 50% opacity
     [theme.breakpoints.down('sm')]: {
       width: '100%',
     },
@@ -138,8 +139,8 @@ function App() {
       </AppBar>
       <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center" height="100vh">
         <Paper className={classes.paper}>
-          <Typography variant="h4">EZ Lottery</Typography>
-            <img src={myImage1} alt="NFT Placeholder" className={classes.image} />
+        <img src={myImage1} alt="NFT Placeholder" className={classes.image} />
+          <Typography variant="h4">Mint</Typography>
           <Typography variant="h6">Price: 0.01 Matic</Typography>
           <Button
             className={classes.button}
@@ -151,8 +152,8 @@ function App() {
           </Button>
         </Paper>
         <Paper className={classes.paper}>
-          <Typography variant="h4">EZ Lottery</Typography>
-            <img src={myImage1} alt="NFT Placeholder" className={classes.image} />
+        <img src={myImage1} alt="NFT Placeholder" className={classes.image} />
+          <Typography variant="h4">Explore</Typography>
           <Typography variant="h6">Price: 0.01 Matic</Typography>
           <Button
             className={classes.button}
@@ -164,8 +165,8 @@ function App() {
           </Button>
         </Paper>
         <Paper className={classes.paper}>
-          <Typography variant="h4">EZ Lottery</Typography>
-            <img src={myImage1} alt="NFT Placeholder" className={classes.image} />
+        <img src={myImage1} alt="NFT Placeholder" className={classes.image} />
+          <Typography variant="h4">Build</Typography>
           <Typography variant="h6">Price: 0.01 Matic</Typography>
           <Button
             className={classes.button}
