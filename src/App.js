@@ -5,7 +5,8 @@ import { Button, Paper, Typography, Box, AppBar, Toolbar } from '@material-ui/co
 import { makeStyles } from '@material-ui/core/styles';
 import './Style/App.css';
 import myImage1 from './Assets/gambling.png';
-import myImage2 from './Assets/rolete.png';
+// import myImage2 from './Assets/rolete.png';
+import myImage2 from './Assets/talantexe.jpg';
 
 let web3, contract;
 
@@ -58,6 +59,8 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     display: 'flex',
     justifyContent: 'space-between', // Ensures even spacing between elements
+    backgroundColor: 'transparent', // Set the background to transparent
+    boxShadow: 'none', // Remove the box-shadow to make it fully transparent
   },
   navButtons: {
     display: 'flex',
