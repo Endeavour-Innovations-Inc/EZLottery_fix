@@ -39,14 +39,32 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    display: 'flex',  // Added to align title
+    justifyContent: 'flex-start',
+  },
+  headerOptions: {
+    display: 'flex',
+    flexGrow: 40, // Changed to 2 to give more space to the navigation buttons
+    justifyContent: 'center',
   },
   image: {
-    width: '200px', 
-    height: 'auto', 
+    width: '200px',
+    height: 'auto',
     border: '2px solid black',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
     },
+  },
+  appBar: {
+    display: 'flex',
+    justifyContent: 'space-between', // Ensures even spacing between elements
+  },
+  navButtons: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  metaMaskButton: {
+    flexGrow: 1, // Adjust this value to change the position of the MetaMask button
   }
 }));
 
@@ -92,11 +110,18 @@ function App() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            EZ Lottery
+            Pidor Elephants 
           </Typography>
+          <div className={classes.headerOptions}>
+            <Button color="inherit">Home</Button>
+            <Button color="inherit">About</Button>
+            <Button color="inherit">Services</Button>
+            <Button color="inherit">Portfolio</Button>
+            <Button color="inherit">Contact</Button>
+          </div>
           {isMetaMaskInstalled ? (
             <Button variant="contained" style={{ backgroundColor: 'green', color: 'white' }} onClick={connectWallet}>
               {buttonLabel}
@@ -150,7 +175,7 @@ function App() {
         </Paper>
       </Box>
     </div>
-  );  
+  );
 }
 
 export default App;
