@@ -5,8 +5,6 @@ import { Button, Paper, Typography, Box, AppBar, Toolbar } from '@material-ui/co
 import { makeStyles } from '@material-ui/core/styles';
 import './Style/App.css';
 
-
-
 import myImage4 from './Assets/PidorElephantsDynasty.png';
 import myImage5 from './Assets/fdfdfd.png';
 import myImage2 from './Assets/talantexe.jpg';
@@ -19,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100vh',
+    // height: '100vh',
     backgroundColor: '#f5f5f5',
     backgroundImage: `url(${myImage2})`,
     backgroundSize: 'cover',
