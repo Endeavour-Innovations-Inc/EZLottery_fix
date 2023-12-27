@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'auto',
     margin: '4%',
     backgroundColor: 'rgba(255, 255, 255, 0.5)', // White with 50% opacity
+    borderRadius: '15px', // Increase this value for smoother angles
     [theme.breakpoints.down('sm')]: {
       width: '100%',
     },
@@ -65,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     textAlign: 'center',
     borderTop: '1px solid #ccc',
-    marginTop: theme.spacing(4),
+    marginTop: 0, // Changed to 0 to remove the top margin
   },
   appBar: {
     display: 'flex',
@@ -79,7 +80,21 @@ const useStyles = makeStyles((theme) => ({
   },
   metaMaskButton: {
     flexGrow: 1, // Adjust this value to change the position of the MetaMask button
-  }
+  },
+  additionalSection: {
+    width: '100%', // Full width of the viewport
+    padding: theme.spacing(1), // Add some padding for spacing
+    backgroundColor: '#e0e0e0', // Light grey background, for example
+    textAlign: 'center', // Center the text
+    marginBottom: 0, // Remove bottom margin
+  },
+  additionalSection2: {
+    width: '100%', // Full width of the viewport
+    padding: theme.spacing(1), // Add some padding for spacing
+    backgroundColor: '#e0e0e0', // Light grey background, for example
+    textAlign: 'center', // Center the text
+    marginBottom: 0, // Remove bottom margin
+  },
 }));
 
 function App() {
@@ -188,6 +203,14 @@ function App() {
           </Button>
         </Paper>
       </Box>
+      {/* Additional Content Sections */}
+      {/* These sections will make the page scrollable as they add more content */}
+      <div className={classes.additionalSection}>
+        {/* Additional content here */}
+      </div>
+      <div className={classes.additionalSection2}>
+        {/* Additional content here */}
+      </div>
       {/* Footer */}
     <footer className={classes.footer}>
       <Typography variant="h6" align="center" gutterBottom>
