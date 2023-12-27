@@ -4,10 +4,11 @@ import EZLottery from "./Assets/EZLottery.json";
 import { Button, Paper, Typography, Box, AppBar, Toolbar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import './Style/App.css';
-import myImage1 from './Assets/gambling.png';
+
+
+
 import myImage4 from './Assets/PidorElephantsDynasty.png';
 import myImage5 from './Assets/fdfdfd.png';
-// import myImage2 from './Assets/rolete.png';
 import myImage2 from './Assets/talantexe.jpg';
 
 let web3, contract;
@@ -40,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginTop: theme.spacing(1),
+    borderRadius: '20px', // Adjust this value as needed
   },
   title: {
     flexGrow: 1,
@@ -142,24 +144,24 @@ function App() {
         <Paper className={classes.paper}>
         <img src={myImage4} alt="NFT Placeholder" className={classes.image} />
           <Typography variant="h4">Mint</Typography>
-          <Typography variant="h6">Mint your first Pidor elephant and become the early supporter of the PidorVerse </Typography>
+          <Typography variant="h6">Mint your first Pidor Dynasty Elephant</Typography>
           <Button
             className={classes.button}
             variant="contained"
             color="primary"
             onClick={mintTicket}
           >
-            Mint Ticket
+            Mint your Pidor
           </Button>
         </Paper>
         <Paper className={classes.paper}>
         <img src={myImage5} alt="NFT Placeholder" className={classes.image} />
           <Typography variant="h4">Marketplace</Typography>
-          <Typography variant="h6"></Typography>
+          <Typography variant="h6">Trade & Stake your NFTs to earn rewards</Typography>
           <Button
             className={classes.button}
             variant="contained"
-            color="primary"
+            style={{ backgroundColor: 'darkgray', color: 'white' }} // Adding inline style
             onClick={mintTicket}
           >
             Coming soon
@@ -168,11 +170,11 @@ function App() {
         <Paper className={classes.paper}>
         <img src={myImage5} alt="NFT Placeholder" className={classes.image} />
           <Typography variant="h4">Build</Typography>
-          <Typography variant="h6">Price: 0.01 Matic</Typography>
+          <Typography variant="h6">Enhance your NFTs to boost stats & yield</Typography>
           <Button
             className={classes.button}
             variant="contained"
-            color="primary"
+            style={{ backgroundColor: 'darkgray', color: 'white' }} // Adding inline style
             onClick={mintTicket}
           >
             Coming soon
