@@ -5,6 +5,7 @@ import { Button, Paper, Typography, Box, AppBar, Toolbar } from '@material-ui/co
 import { makeStyles } from '@material-ui/core/styles';
 import './Style/App.css';
 
+import myImage6 from './Assets/zaebis.png';
 import myImage4 from './Assets/PidorElephantsDynasty.png';
 import myImage5 from './Assets/fdfdfd.png';
 import myImage2 from './Assets/talantexe.jpg';
@@ -57,6 +58,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       width: '100%',
     },
+  },
+  footer: {
+    width: '100%', // Ensure the footer attempts to take full width
+    backgroundColor: theme.palette.grey[200],
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    borderTop: '1px solid #ccc',
+    marginTop: theme.spacing(4),
   },
   appBar: {
     display: 'flex',
@@ -166,7 +175,7 @@ function App() {
           </Button>
         </Paper>
         <Paper className={classes.paper}>
-        <img src={myImage5} alt="NFT Placeholder" className={classes.image} />
+        <img src={myImage6} alt="NFT Placeholder" className={classes.image} />
           <Typography variant="h4">Build</Typography>
           <Typography variant="h6">Enhance your NFTs to boost stats & yield</Typography>
           <Button
@@ -179,6 +188,15 @@ function App() {
           </Button>
         </Paper>
       </Box>
+      {/* Footer */}
+    <footer className={classes.footer}>
+      <Typography variant="h6" align="center" gutterBottom>
+        Footer Content
+      </Typography>
+      <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+        Something here to give the footer a purpose!
+      </Typography>
+    </footer>
     </div>
   );
 }
