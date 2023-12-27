@@ -5,6 +5,8 @@ import { Button, Paper, Typography, Box, AppBar, Toolbar } from '@material-ui/co
 import { makeStyles } from '@material-ui/core/styles';
 import './Style/App.css';
 import myImage1 from './Assets/gambling.png';
+import myImage4 from './Assets/PidorElephantsDynasty.png';
+import myImage5 from './Assets/fdfdfd.png';
 // import myImage2 from './Assets/rolete.png';
 import myImage2 from './Assets/talantexe.jpg';
 
@@ -50,9 +52,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   image: {
-    width: '200px',
+    width: '80px',
     height: 'auto',
-    border: '2px solid black',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
     },
@@ -117,7 +118,7 @@ function App() {
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Pidor Elephants 
+            Pidor Elephants Dynasty
           </Typography>
           <div className={classes.headerOptions}>
             <Button color="inherit">Home</Button>
@@ -139,9 +140,9 @@ function App() {
       </AppBar>
       <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center" height="100vh">
         <Paper className={classes.paper}>
-        <img src={myImage1} alt="NFT Placeholder" className={classes.image} />
+        <img src={myImage4} alt="NFT Placeholder" className={classes.image} />
           <Typography variant="h4">Mint</Typography>
-          <Typography variant="h6">Price: 0.01 Matic</Typography>
+          <Typography variant="h6">Mint your first Pidor elephant and become the early supporter of the PidorVerse </Typography>
           <Button
             className={classes.button}
             variant="contained"
@@ -152,20 +153,20 @@ function App() {
           </Button>
         </Paper>
         <Paper className={classes.paper}>
-        <img src={myImage1} alt="NFT Placeholder" className={classes.image} />
-          <Typography variant="h4">Explore</Typography>
-          <Typography variant="h6">Price: 0.01 Matic</Typography>
+        <img src={myImage5} alt="NFT Placeholder" className={classes.image} />
+          <Typography variant="h4">Marketplace</Typography>
+          <Typography variant="h6"></Typography>
           <Button
             className={classes.button}
             variant="contained"
             color="primary"
             onClick={mintTicket}
           >
-            Mint Ticket
+            Coming soon
           </Button>
         </Paper>
         <Paper className={classes.paper}>
-        <img src={myImage1} alt="NFT Placeholder" className={classes.image} />
+        <img src={myImage5} alt="NFT Placeholder" className={classes.image} />
           <Typography variant="h4">Build</Typography>
           <Typography variant="h6">Price: 0.01 Matic</Typography>
           <Button
@@ -174,7 +175,7 @@ function App() {
             color="primary"
             onClick={mintTicket}
           >
-            Mint Ticket
+            Coming soon
           </Button>
         </Paper>
       </Box>
