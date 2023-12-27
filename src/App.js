@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'auto',
     margin: '4%',
     backgroundColor: 'rgba(255, 255, 255, 0.5)', // White with 50% opacity
-    borderRadius: '15px', // Increase this value for smoother angles
+    borderRadius: '35px', // Increase this value for smoother angles
     [theme.breakpoints.down('sm')]: {
       width: '100%',
     },
@@ -87,6 +87,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#e0e0e0', // Light grey background, for example
     textAlign: 'center', // Center the text
     marginBottom: 0, // Remove bottom margin
+    backgroundImage: `url(${myImage2})`,
   },
   additionalSection2: {
     width: '100%', // Full width of the viewport
