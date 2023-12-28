@@ -5,6 +5,7 @@ import { Button, Paper, Typography, Box, AppBar, Toolbar } from '@material-ui/co
 import { makeStyles } from '@material-ui/core/styles';
 import './Style/App.css';
 
+import myImage7 from './Assets/hills.png';
 import myImage6 from './Assets/zaebis.png';
 import myImage4 from './Assets/PidorElephantsDynasty.png';
 import myImage5 from './Assets/fdfdfd.png';
@@ -21,7 +22,9 @@ const useStyles = makeStyles((theme) => ({
     // height: '100vh',
     backgroundColor: '#f5f5f5',
     backgroundImage: `url(${myImage2})`,
-    backgroundSize: 'cover',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'top center', // Adjust as needed
     [theme.breakpoints.down('sm')]: {
       height: 'auto',
       padding: theme.spacing(2),
@@ -82,19 +85,32 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1, // Adjust this value to change the position of the MetaMask button
   },
   additionalSection: {
-    width: '100%', // Full width of the viewport
-    padding: theme.spacing(1), // Add some padding for spacing
-    backgroundColor: '#e0e0e0', // Light grey background, for example
-    textAlign: 'center', // Center the text
-    marginBottom: 0, // Remove bottom margin
-    backgroundImage: `url(${myImage2})`,
+    // Common background styles
+    backgroundImage: `url(${myImage7})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    // Individual section styles
+    width: '100%',
+    padding: theme.spacing(1),
+    backgroundColor: '#e0e0e0',
+    textAlign: 'center',
+    marginBottom: 0,
+    minHeight: '100vh',
   },
   additionalSection2: {
-    width: '100%', // Full width of the viewport
-    padding: theme.spacing(1), // Add some padding for spacing
-    backgroundColor: '#e0e0e0', // Light grey background, for example
-    textAlign: 'center', // Center the text
-    marginBottom: 0, // Remove bottom margin
+    // Same background styles as additionalSection
+    backgroundImage: `url(${myImage7})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    // Individual section styles
+    width: '100%',
+    padding: theme.spacing(1),
+    backgroundColor: '#e0e0e0',
+    textAlign: 'center',
+    marginBottom: 0,
+    minHeight: '100vh',
   },
 }));
 
