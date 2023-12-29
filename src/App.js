@@ -11,6 +11,9 @@ import myImage4 from './Assets/PidorElephantsDynasty.png';
 import myImage5 from './Assets/fdfdfd.png';
 import myImage2 from './Assets/talantexe.jpg';
 
+import TelegramIcon from '@material-ui/icons/Telegram';
+import TwitterIcon from '@material-ui/icons/Twitter';
+
 let web3, contract;
 
 const useStyles = makeStyles((theme) => ({
@@ -65,11 +68,29 @@ const useStyles = makeStyles((theme) => ({
   },
   footer: {
     width: '100%', // Ensure the footer attempts to take full width
-    backgroundColor: theme.palette.grey[200],
-    padding: theme.spacing(1),
+    backgroundColor: '#333', // Dark matte background
+    color: 'white',
+    padding: theme.spacing(3),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     textAlign: 'center',
     borderTop: '1px solid #ccc',
     marginTop: 0, // Changed to 0 to remove the top margin
+  },
+  socialIcons: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    // Add spacing between icons
+    '& > *:not(:last-child)': {
+      marginRight: theme.spacing(1),
+    }
+  },
+  branding: {
+    textAlign: 'left',
+    // Adjust position as needed
   },
   appBar: {
     display: 'flex',
@@ -98,6 +119,27 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 0,
     minHeight: '100vh',
   },
+  header: {
+    textAlign: 'center',
+    color: 'white', // Set text color to white
+    marginTop: theme.spacing(1), // Adjust the top margin to position it closer to the top
+    marginBottom: theme.spacing(1), // Adjust bottom margin for spacing
+    fontSize: '2rem', // Larger font size, adjust as needed
+    // Add other styles as needed
+  },
+  discordButton: {
+    backgroundColor: 'white',
+    color: 'black',
+    borderRadius: '20px', // Adjust for desired roundness
+    border: 'none',
+    padding: '10px 20px',
+    marginTop: '20px', // Spacing between the header and the button
+    cursor: 'pointer',
+    '&:hover': {
+      // Optional: Style for hover state
+    },
+    // Add other styles as needed
+  },
   additionalSection2: {
     // Same background styles as additionalSection
     backgroundImage: `url(${myImage7})`,
@@ -111,6 +153,23 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     marginBottom: 0,
     minHeight: '100vh',
+  },
+  signInText: {
+    // Style for the sign-in text
+    marginBottom: theme.spacing(1), // Adjust spacing as needed
+  },
+  comingSoonButton: {
+    backgroundColor: 'gray',
+    color: 'white',
+    borderRadius: '15px', // Smooth edges
+    border: 'none',
+    padding: theme.spacing(1, 2),
+    cursor: 'not-allowed', // Indicates it's not clickable yet
+    // Add other styling as needed
+  },
+  footer_header: {
+    // Style for your header
+    marginBottom: theme.spacing(1), // Adjust spacing as needed
   },
 }));
 
@@ -179,6 +238,7 @@ function App() {
           )}
         </Toolbar>
       </AppBar>
+      <h2 className={classes.header}>Join the Community</h2>
       <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center" height="100vh">
         <Paper className={classes.paper}>
         <img src={myImage4} alt="NFT Placeholder" className={classes.image} />
@@ -223,18 +283,30 @@ function App() {
       {/* Additional Content Sections */}
       {/* These sections will make the page scrollable as they add more content */}
       <div className={classes.additionalSection}>
-        {/* Additional content here */}
+        <h2 className={classes.header}>Join the Community</h2>
+        <button className={classes.discordButton}>Join us on Discord</button>
       </div>
       <div className={classes.additionalSection2}>
-        {/* Additional content here */}
+        <h2 className={classes.header}>Pidor Dynasty Metaverse</h2>
+        <p className={classes.signInText}>Sign in with Metamask</p>
+        <button className={classes.comingSoonButton}>Coming Soon</button>
       </div>
       {/* Footer */}
     <footer className={classes.footer}>
-      <Typography variant="h6" align="center" gutterBottom>
-        Footer Content
-      </Typography>
-      <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-        Something here to give the footer a purpose!
+    <div className={classes.socialIcons}>
+        <TelegramIcon />
+        <TwitterIcon />
+      </div>
+      <div className={classes.branding}>
+        <Typography variant="h6" align="left">
+          Pidor Dynasty Elephants
+        </Typography>
+        <Typography variant="subtitle1" align="left" color="textSecondary">
+          An Open Source Blockchain Ecosystem
+        </Typography>
+      </div>
+      <Typography variant="caption" align="center" color="textSecondary" component="p">
+        © 2023 Pidor Dynasty. All rights reserved.
       </Typography>
     </footer>
     </div>
