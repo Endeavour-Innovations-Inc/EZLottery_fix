@@ -38,13 +38,14 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     width: '100%',
     height: 'auto',
-    margin: '4%',
+    margin: '0 4% 4%', // Remove top margin
     backgroundColor: 'rgba(255, 255, 255, 0.5)', // White with 50% opacity
     borderRadius: '35px', // Increase this value for smoother angles
     [theme.breakpoints.down('sm')]: {
       width: '100%',
+      margin: '0 4% 2%', // Adjust for smaller screens as needed
     },
-  },
+  },  
   button: {
     marginTop: theme.spacing(1),
     borderRadius: '20px', // Adjust this value as needed
